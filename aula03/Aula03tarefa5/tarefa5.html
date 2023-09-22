@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Valores Positivos</title>
+</head>
+<body>
+    
+    <script>
+        let soma = 0;
+        let numero;
+
+        do {
+            numero = parseFloat(prompt("Digite um valor positivo (ou um número negativo para sair):"));
+
+            if (numero > 0) {
+                soma += numero;
+            }
+        } while (numero >= 0);
+
+        const resultadoDiv = document.createElement("div");
+        resultadoDiv.innerHTML = "<p>A soma dos valores positivos digitados é: " + soma + "</p>";
+        document.body.appendChild(resultadoDiv);
+    </script>
+</body>
+</html>

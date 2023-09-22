@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Números</title>
+</head>
+<body>
+    
+     <div id="resultado">
+        <!-- Aqui os resultados serão exibidos -->
+    </div>
+
+    <script>
+        let maiorValor = Number.MIN_SAFE_INTEGER;
+        let menorValor = Number.MAX_SAFE_INTEGER;
+        let soma = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            let numero;
+            do {
+                numero = parseInt(prompt(`Digite o número ${i}:`));
+            } while (isNaN(numero) || numero <= 0);
+
+            if (numero > maiorValor) {
+                maiorValor = numero;
+            }
+            if (numero < menorValor) {
+                menorValor = numero;
+            }
+            soma += numero;
+        }
+
+        const media = soma / 10;
+
+        // Exibir os resultados na página HTML
+        const resultadoDiv = document.getElementById("resultado");
+        resultadoDiv.innerHTML = `
+            <p>Maior valor: ${maiorValor}</p>
+            <p>Menor valor: ${menorValor}</p>
+            <p>Média dos números: ${media}</p>
+        `;
+    </script>
+</body>
+</html>

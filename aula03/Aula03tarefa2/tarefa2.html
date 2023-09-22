@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Número</title>
+</head>
+<body>
+    <script>
+        let numero;
+
+        while (true) {
+            numero = parseInt(prompt("Digite um número entre 10 e 25:"));
+
+            if (numero >= 10 && numero <= 25) {
+                alert("Número digitado: " + numero);
+                break; // Sai do loop quando a entrada é válida
+            } else {
+                alert("Entrada inválida. Digite novamente.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

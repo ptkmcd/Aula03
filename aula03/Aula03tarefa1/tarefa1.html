@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números de 1 a 50 (while)</title>
+</head>
+<body>
+     <ul id="whileList"></ul>
+
+    <script>
+        let contadorWhile = 1;
+
+        while (contadorWhile <= 50) {
+            const item = document.createElement("li");
+            item.textContent = contadorWhile;
+            document.getElementById("whileList").appendChild(item);
+            contadorWhile++;
+        }
+    </script>
+</body>
+</html>
